@@ -3,106 +3,25 @@ title: carps space
 layout: 'base.njk'
 ---
 
-    <div class="carptainer">
-      <div class="sticky">
-        <ul>
-          <li>
-            <a href="#" contenteditable>
-              <i class="fal fa-pencil-alt"></i>
-              <p>
-                <span style="font-size: 1.4rem;">container queries</span><br />
-                <span style="font-size: 2rem;">masonry grid</span><br />
-                 <span style="font-size: 1.1rem; line-height: 1.5;">:has() parent selector</span>
-                 <span style="font-size: 1.8rem;">variable fonts</span><br />
-                 <span style="font-size: 1.7rem;">scroll timeline</span><br />
-              </p>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-        <div class="header-flex">
-            <a href="gradient.html"><h1>carps space</h1></a>
-            <h1 class="type">
-                <i class="fal fa-bicycle"></i>
-                <i class="fal fa-biking"></i>
-                <i class="far fa-bicycle"></i>
-                <i class="far fa-biking"></i>
-                <i class="fas fa-bicycle"></i>
-                <i class="fas fa-biking"></i>
-            </h1>
-        </div>
-
-        <div class="wrapper">
-            <nav>
-                <a class="fancy-link" href="cssgrid.html"><i class="fas fa-th"></i></a>
-                <a class="fancy-link" href="hub.html"><i class="fas fa-tachometer-alt-fast"></i></a>
-                <a  class="fancy-link" href="aliens.html"><i class="fas fa-alien-monster"></i></a>
-                <a class="fancy-link" href="3d.html"><i class="fas fa-cube"></i></a>
-                <a href="maze2.html"><div class="maze"></div></a>
-                <a class="fancy-link" href="shapes.html"><i class="fas fa-shapes"></i></a>
-                <a class="fancy-link" href="masonry.html"><i class="fas fa-chimney"></i></a>
-                <a class="fancy-link" href="text.html"><i class="fas fa-text-size"></i></a>
-                <a class="fancy-link" href="holygrail.html"><i class="fas fa-trophy"></i></a>
-                <a class="fancy-link" href="forms.html"><i class="fas fa-file-invoice"></i></a>
-            </nav>
-
-            <main>
-
-                <div class="carp">
-                  <div class="outer-bubble">
-                    <div class="text-bubble">
-                      <div class="inner-bubble"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="text">Ben <span class="name">Carpenter</span> is a front end web developer in <br /><span class="city">Cleveland</span>, Ohio.</div>
-                <a href="terminal.html"><img /></a>
-            </main>
-        </div>
-
-        <footer>
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a href="https://www.twitter.com/afewgoodben" target="_blank" class="hvr-icon-bounce">
-                        <i class="fab fa-twitter hvr-icon"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                <a href="https://www.instagram.com/beneleventwelve/" target="_blank" class="hvr-icon-bounce">
-                    <i class="fab fa-instagram hvr-icon"></i>
-                </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.facebook.com/spacejam" target="_blank" class="hvr-icon-bounce">
-                        <i class="fab fa-facebook hvr-icon"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.last.fm/user/noclist" target="_blank" class="hvr-icon-bounce">
-                        <i class="fab fa-lastfm hvr-icon"></i>
-                    </a>
-                </li>
-
-                <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/ben-carpenter-2556299/" target="_blank" class="hvr-icon-bounce">
-                        <i class="fab fa-linkedin hvr-icon"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.strava.com/athletes/45181835" target="_blank" class="hvr-icon-bounce">
-                        <i class="fab fa-strava hvr-icon"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://letterboxd.com/benjammin/" target="_blank" class="hvr-icon-bounce">
-                        <div class="circles hvr-icon">
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+<div class="carptainer">
+    {% include 'sticky.njk' %}
+    <div class="header-flex">
+        <a href="gradient.html"><h1>{{ title }}</h1></a>
+        {% include 'typewriter.njk' %}
     </div>
+
+    <div class="wrapper">
+        {% include 'navigation.njk' %}
+        <main>
+            <div class="carp">
+                {% include 'text-bubble.njk' %}
+            </div>
+            <div class="text">
+                Ben <span class="name">Carpenter</span> is a front end web developer in <br />
+                <span class="city">Cleveland</span>, Ohio.
+            </div>
+            <a href="terminal.html"><img /></a>
+        </main>
+    </div>
+    {% include 'footer.njk' %}
+</div>
